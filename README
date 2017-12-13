@@ -1,0 +1,13 @@
+When make is called, all the in/out files under the nodes are removed so that
+they aren't appended to in the next run
+
+
+Only works on lists of 8 machines.
+The URL supplied to this crawler must match one in the config file
+	Note on this: The URLs in the config file may be redirected, which would result in
+	 the top directory not matching any of the nodes. For instance cs.colostate.edu/cstop/index.html
+	 redirects to ..../index.php. So the top directory is ....-index.html, but it contains
+	 no directory under nodes/ that matches that.
+
+
+I truncate anything after a '#' because that's a link to a position on a page.
